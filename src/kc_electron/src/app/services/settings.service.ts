@@ -353,4 +353,4 @@ function makeDirectory(dir: string) {
 }
 
 export const settingsService = new SettingsService();
-module.exports = settingsService;
+export default settingsService;

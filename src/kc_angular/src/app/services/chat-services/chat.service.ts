@@ -219,7 +219,14 @@ export class ChatService {
 
     // Remove any empty messages
     body.messages = body.messages.filter(
-      (message) => message.content?.trim() !== ''
+      (message) => {
+        if (typeof message.content === 'string') {
+          return message.content.trim() !== '';
+        } else if (Array.isArray(message.content)) {
+          return message.content.length > 0;
+        }
+        return false;
+      }
     );
 
     return this.http.post(this.backendUrl + '/chat', body).pipe(

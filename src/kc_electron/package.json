@@ -6,6 +6,9 @@
   "author": "Rob Royce <robertris2@gmail.com> (https://robroyce.dev)",
   "license": "Apache-2.0",
   "private": true,
+  "engines": {
+    "node": "18.16.0"
+  },
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "build-dev": "webpack --config webpack.dev.js",
@@ -16,13 +19,14 @@
     "watch-electron-dev": "webpack --config webpack.dev.js --watch"
   },
   "dependencies": {
-    "@dqbd/tiktoken": "^1.0.7",
+    "@dqbd/tiktoken": "^1.0.14",
     "chokidar": "^3.5.3",
     "cors": "^2.8.5",
     "crypto-js": "^4.1.1",
     "dotenv": "^16.3.1",
     "electron": "^26.3.0",
     "electron-updater": "^6.1.4",
+    "express": "^4.18.2",
     "express-rate-limit": "^6.11.2",
     "lodash": "^4.17.21",
     "mime-types": "^2.1.35",
@@ -31,6 +35,7 @@
     "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "@electron/get": "^3.1.0",
     "@types/cors": "^2.8.17",
     "@types/crypto-js": "^4.1.3",
     "@types/lodash": "^4.14.200",

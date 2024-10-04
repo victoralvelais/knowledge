@@ -18,8 +18,7 @@ import { IncomingMessage, ServerResponse } from "http";
 import { SettingsModel } from "../../../../kc_shared/models/settings.model";
 import { IpcMessage } from "../../../../kc_shared/models/electron.ipc.model";
 import { Buffer } from "buffer";
-
-const settings = require("./settings.service");
+import settings from "./settings.service";
 
 class ExtensionServer {
   private __server?: http.Server;

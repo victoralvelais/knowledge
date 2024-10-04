@@ -7,6 +7,9 @@
   "private": true,
   "postinstall": "electron-builder install-app-deps",
   "type": "commonjs",
+  "engines": {
+    "node": "18.16.0"
+  },
   "workspaces": [
     "src/kc_electron",
     "src/kc_angular"
@@ -39,7 +42,8 @@
     "watch-main": "cd src/kc_angular && yarn run watch-main",
     "watch-main-dev": "cd src/kc_angular && yarn run watch-main-dev",
     "watch-electron": "cd src/kc_electron && yarn run watch-electron",
-    "watch-electron-dev": "cd src/kc_electron && yarn run watch-electron-dev"
+    "watch-electron-dev": "cd src/kc_electron && yarn run watch-electron-dev",
+    "windows-watch": "yarn watch-main-dev && yarn watch-electron-dev && yarn start-windows"
   },
   "packageManager": "yarn@3.2.4",
   "dependencies": {
@@ -87,6 +91,7 @@
     "node-loader": "^2.0.0",
     "prettier": "^2.8.8",
     "standard-version": "^9.5.0",
+    "webpack": "^5.89.0",
     "worker-loader": "^3.0.8"
   },
   "build": {
@@ -165,5 +170,8 @@
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": "error"
     }
+  },
+  "resolutions": {
+    "got": "^12.5.3"
   }
 }

@@ -5,6 +5,9 @@
   "author": "Rob Royce <robertris2@gmail.com> (https://robroyce.dev)",
   "license": "Apache-2.0",
   "private": true,
+  "engines": {
+    "node": "18.16.0"
+  },
   "scripts": {
     "ng": "ng",
     "build": "ng build main --configuration production --base-href ./",

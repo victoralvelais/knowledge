@@ -36,7 +36,7 @@ export class ChatPrompts {
     type: 'Source' | 'Project'
   ): CreateChatCompletionRequestMessage[] => {
     const prompts = [
-      `Information cutoff: December 2021, Current date: ${new Date().toDateString()}.`,
+      `Information cutoff: October 2023, Current date: ${new Date().toDateString()}.`,
       `Knowledge is a tool for saving, searching, accessing, and exploring all of your favorite websites, documents and files.`,
       `Knowledge is an application that can organize your research and learning materials.`,
       `A Source is a URL or local file path that contains information, data, or other digital resources. Users import Sources into Knowledge.`,

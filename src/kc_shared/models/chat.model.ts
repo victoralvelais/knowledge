@@ -19,7 +19,7 @@
  */
 export interface ChatModel {
   /* The name of the model to use for the API call (see OpenAI API) */
-  name: "gpt-3.5-turbo" | "gpt-4";
+  name: "gpt-3.5-turbo" | "gpt-4" | "gpt-4o";
 
   /* The name of the model to display to the user */
   label: string;
@@ -74,16 +74,17 @@ const GPT3p5Turbo: ChatModel = {
   ...OpenAIDefaults,
 };
 
-/*TODO: not available in tiktoken yet
-  const GPT3p5Turbo16k: ChatModel = {
-  name: "gpt-3.5-turbo-16k",
-  label: "GPT-3.5 Turbo 16k",
-  description:
-    "GPT-3.5 Turbo is optimized for dialogue. This model has a larger token limit than GPT-3.5 Turbo, so you can enter more text at once.",
-  tokenLimit: 16384,
-  inputCostPer1k: 0.003,
-  outputCostPer1k: 0.004,
-};*/
+const GPT4o: ChatModel = {
+  name: "gpt-4o",
+  label: "GPT-4o",
+  description: "GPT-4o is optimized for dialogue.",
+  token_limit: 128000,
+  input_kilo_cost: 0.0025,
+  output_kilo_cost: 0.00125,
+  max_tokens_upper_bound: 16384,
+  max_tokens: 4096, // Default
+  ...OpenAIDefaults,
+};
 
 const GPT4: ChatModel = {
   name: "gpt-4",
@@ -98,4 +99,4 @@ const GPT4: ChatModel = {
   ...OpenAIDefaults,
 };
 
-export const SupportedChatModels: ChatModel[] = [GPT3p5Turbo, GPT4];
+export const SupportedChatModels: ChatModel[] = [GPT3p5Turbo, GPT4, GPT4o];

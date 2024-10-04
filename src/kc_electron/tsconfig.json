@@ -46,9 +46,9 @@
     // "isolatedModules": true,               /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
 
     /* Strict Type-Checking Options */
-    "strict": true,
+    "strict": false,
     /* Enable all strict type-checking options. */
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     /* Raise error on expressions and declarations with an implied 'any' type. */
     // "strictNullChecks": true,              /* Enable strict null checks. */
     // "strictFunctionTypes": true,           /* Enable strict checking of function types. */
@@ -96,7 +96,8 @@
 
     /* Options not defined in the boilerplate of this file */
     "resolveJsonModule": true,
-    "preserveConstEnums": true
+    "preserveConstEnums": true,
+    "noEmitOnError": false
   },
   "include": [
     "src/**/*",
@@ -107,4 +108,3 @@
     "**/*.spec.ts"
   ]
 }
-

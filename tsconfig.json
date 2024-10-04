@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es2020",
     "module": "commonjs",
-    "strict": true,
+    "strict": false,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,

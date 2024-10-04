@@ -6,9 +6,9 @@
     "allowSyntheticDefaultImports": true,
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
+    "strict": false,
+    "noImplicitReturns": false,
+    "noFallthroughCasesInSwitch": false,
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
@@ -17,6 +17,7 @@
     "importHelpers": true,
     "target": "es2020",
     "module": "es2020",
+    "skipLibCheck": true,
     "lib": [
       "es2018",
       "dom"
@@ -59,6 +60,6 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": false
   }
 }

@@ -20,7 +20,7 @@ import { OpenAI } from "openai";
 import fs from "fs";
 import chatEncrypt from "../utils/encrypt.utils";
 
-const settings = require("../../app/services/settings.service");
+import settings from "../../app/services/settings.service";
 
 export default class ApiKeyController {
   async checkApiKey(req: Request, res: Response): Promise<Response> {

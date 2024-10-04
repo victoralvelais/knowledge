@@ -38,7 +38,7 @@ import * as uuid from "uuid";
 import KnowledgeIpc from "./local/utils/ipc.utils";
 import ChatServer from "./local/chat.api";
 
-const settingsService = require("./app/services/settings.service");
+import settingsService from "./app/services/settings.service";
 
 const MAIN_ENTRY: string = path.join(
   app.getAppPath(),

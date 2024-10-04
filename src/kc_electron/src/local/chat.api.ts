@@ -29,8 +29,7 @@ import {
   ChatSettingsModel,
   SettingsModel,
 } from "../../../kc_shared/models/settings.model";
-
-const settings = require("../app/services/settings.service");
+import settings from "../app/services/settings.service";
 
 export default class ChatServer {
   private app: Express;

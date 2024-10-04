@@ -18,9 +18,8 @@ import {
   PromptForDirectoryRequest,
   ThumbnailRequest,
 } from "../../../../kc_shared/models/electron.ipc.model";
-
-const fse = require("fs-extra");
-const settingsService = require("../services/settings.service");
+import fse from "fs-extra";
+import settingsService from "../services/settings.service";
 
 const share: any = (global as any).share;
 const ipcMain: any = share.ipcMain;

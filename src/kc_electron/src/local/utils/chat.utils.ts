@@ -16,8 +16,7 @@
 
 import { Chat } from "openai/resources";
 import CreateChatCompletionRequestMessage = Chat.CreateChatCompletionRequestMessage;
-
-const settings = require("../../app/services/settings.service");
+import settings from "../../app/services/settings.service";
 
 export default class ChatUtils {
   constructor() {}

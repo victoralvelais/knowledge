@@ -17,8 +17,7 @@
 import { NextFunction, Request, Response } from "express";
 import fs from "fs";
 import path from "path";
-
-const settingsService = require("../../app/services/settings.service");
+import settingsService from "../../app/services/settings.service";
 
 export class SourceLoader {
   static async load(req: Request, res: Response, next: NextFunction) {

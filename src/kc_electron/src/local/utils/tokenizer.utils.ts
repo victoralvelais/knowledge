@@ -30,12 +30,12 @@ import {
 import { Completions } from "openai/resources/chat";
 import CreateChatCompletionRequestMessage = Completions.CreateChatCompletionRequestMessage;
 
-const settingsService = require("../../app/services/settings.service");
+import settingsService from "../../app/services/settings.service";
 
 export default class TokenizerUtils {
   private tiktoken!: Tiktoken;
 
-  private model: TiktokenModel = "gpt-3.5-turbo";
+  private model: TiktokenModel = "gpt-4o";
 
   constructor() {
     this.initialize();

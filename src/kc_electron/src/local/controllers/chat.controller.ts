@@ -24,8 +24,7 @@ import {
 import TokenizerUtils from "../utils/tokenizer.utils";
 import { OpenAI } from "openai";
 import { CreateChatCompletionRequestMessage } from "openai/resources";
-
-const settings = require("../../app/services/settings.service");
+import settings from "../../app/services/settings.service";
 
 export default class ChatController {
   private openai?: OpenAI;
@@ -39,17 +38,19 @@ export default class ChatController {
 
     this.init();
 
-    settings.all
-      .pipe(
-        skip(1),
-        throttleTime(400),
-        debounceTime(1000),
-        map((s: SettingsModel) => s.app.chat),
-        tap((chatSettings: ChatSettingsModel) => {
-          this.settings = chatSettings;
-        })
-      )
-      .subscribe();
+    if (settings.all.pipe) {
+      settings.all
+        .pipe(
+          skip(1),
+          throttleTime(400),
+          debounceTime(1000),
+          map((s: SettingsModel) => s.app.chat),
+          tap((chatSettings: ChatSettingsModel) => {
+            this.settings = chatSettings;
+          })
+        )
+        .subscribe();
+    }
   }
 
   getSettings() {
